@@ -52,7 +52,7 @@ const Business_function_right = () => {
 
     let Business_data = ""
     Business_array.forEach((elem, index) => {
-        if (index < 10){
+        if (index < 40){
         Business_data += `
         <a href="/news/${encodeURIComponent(elem.url)}/${encodeURIComponent(elem.urlToImage)}">
         
