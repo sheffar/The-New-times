@@ -1,11 +1,23 @@
 let humbuger = document.querySelector('.hummbuger');
 let nav = document.querySelector(".rr")
+let navcon =  document.querySelector(".nav_main_contaianer")
 // let body = document.querySelector(".body")
 document.addEventListener("DOMContentLoaded", function () {
 humbuger.addEventListener("click", () => {
     nav.classList.toggle("activate")
     humbuger.classList.toggle("activate")
 });
+
+window.addEventListener("scroll", ()=>{
+    const scrollPosition = window.scrollY;
+    const scrollDirection = scrollPosition > 0 ? "down": "up";
+
+    if (scrollDirection === "down"){
+        navcon.classList.add("hidden")
+    }else{
+        navcon.classList.remove("hidden")
+    }
+})
 
 // API AND THE KEY
 

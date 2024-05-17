@@ -28,18 +28,18 @@ const The_call = async () => {
     }
 
 
-  // Cake function
-        const cake_response = await fetch(cake + Api_key)
+    // Cake function
+    const cake_response = await fetch(cake + Api_key)
 
-        const cake_data = await cake_response.json()
+    const cake_data = await cake_response.json()
 
-        if (cake_data.status === "ok") {
-            cake_array = cake_data.articles
-            console.log(cake_array);
-            Business_function()
-        } else {
-            console.log(cake_data.status)
-        }
+    if (cake_data.status === "ok") {
+        cake_array = cake_data.articles
+        console.log(cake_array);
+        Business_function()
+    } else {
+        console.log(cake_data.status)
+    }
 
 
 }
@@ -52,8 +52,8 @@ const Business_function_right = () => {
 
     let Business_data = ""
     Business_array.forEach((elem, index) => {
-        if (index < 40){
-        Business_data += `
+        if (index < 40) {
+            Business_data += `
         <a href="/news/${encodeURIComponent(elem.url)}/${encodeURIComponent(elem.urlToImage)}">
         
         <div class="business_news">
@@ -71,8 +71,8 @@ const Business_function_right = () => {
          </div>
                    
         `
-    }
-    return
+        }
+        return
     })
     business_right.innerHTML = Business_data;
 }
@@ -85,8 +85,8 @@ const Business_function = () => {
 
     let Business_data = ""
     cake_array.forEach((elem, index) => {
-        if (index < 40){
-        Business_data += `
+        if (index < 40) {
+            Business_data += `
         <a href="/news/${encodeURIComponent(elem.url)}/${encodeURIComponent(elem.urlToImage)}">
         <div class="The_post_box">
             <div class="The_post_img">
@@ -97,8 +97,8 @@ const Business_function = () => {
        </div>
         </div>
         `
-    }
-    return
+        }
+        return
     })
     recent_post.innerHTML = Business_data;
 }

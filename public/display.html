@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE CURRENT TIMES</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <!-- THE NAV BAR -->
+    <nav>
+        <div class="nav_main_contaianer">
+            <div class="nav_sub">
+                <div class="logo_container">
+                    <a href="index.html">
+                        <p>NEWS <span>X</span></p>
+                        <p>THE ART OF BROADCASTING</p>
+                    </a>
+                </div>
+                <!-- <div class="Ads_banner">
+                    <img src="img/IC.jpg">
+                </div> -->
+            </div>
+            <!-- THE NAV LINKS -->
+            <div class="nav_links">
+                <div class="hummbuger">
+                    <span class="menu" id="menu"></span>
+                    <span class="menu" id="menu"></span>
+                    <span class="menu" id="menu"></span>
+                </div>
+
+                <ul class="rr">
+                    <li><a href="Business.html">BUSINESS</a></li>
+                    <li><a href="Economy.html">ECONOMY</a></li>
+                    <li><a href="index.html">FOR YOU</a></li>
+                    <li><a href="#">FOOTBALL</a></li>
+                </ul>
+            </div>
+
+            <!-- SEARCH BAR -->
+            <!-- <div class="search_bar">
+                <input type="text" placeholder="Search Here" id="search">
+            </div> -->
+
+        </div>
+    </nav>
+    <!-- END OF NAV -->
+    <div class="display_container">
+        <!-- RIGHT SECTION -->
+
+        <div class="display_left_section">
+            <div class="display_left_img" id="display_left_img">
+                <!-- <%- image %> -->
+            </div>
+            <div class="display_left_content" id="display_left_content">
+                <p>
+                    <!-- <%= page %> -->
+                </p>
+            </div>
+            <!-- THE INTERACTION SECTION -->
+            <div class="comment_section">
+                <div class="text_field">
+                    <input type="text" placeholder="Input your name" class="name_input">
+                    <textarea class="comment_field" placeholder="Add Your Comment here..."></textarea>
+                    <button onclick="addcomment()">Comment</button>
+                </div>
+
+            </div>
+
+            <!-- COMMENTS SECTION -->
+            <div id="comments"></div>
+
+
+
+        </div>
+        <!-- LEFT SECTION -->
+        <div class="display_right_section">
+            <div class="Right_section">
+                <div class="Right_section_box">
+                    <div class="Right_section_img">
+                        <img src="img/VR.jpg">
+                    </div>
+                    <div class="Right_section_des">
+                        <p>Just a dummy text that will be in side this div, lor
+                            Just a dummy text that will be in side this div</p>
+                        <p class="Right_section_img_date">23 Aug 2023</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="footer-div">
+
+            <div class="first_footer_div">
+                <div class="Footer_logo">
+                    <p>NEWS <span>X</span></p>
+                    <p>THE ART OF BROADCASTING</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos voluptate quidem, officiis iste
+                        nesciunt, tenetur debitis, illum deserunt aspernatur officia soluta architecto ipsum sint! Eius,
+                        dolorem. Odio accusamus culpa animi.</p>
+                </div>
+            </div>
+            <div class="second_div">
+                <p>Important </p>
+                <p>Terms of service</p>
+                <p>Privacy policy </p>
+                <p>Content Policy</p>
+                <p>Disclaimer</p>
+            </div>
+
+            <div class="third_div">
+                <p>Contact us</p>
+                <p>Rich@gmail.com</p>
+                <div class="subscribe">
+                    <p>Subscribe Now</p>
+                    <input type="text" placeholder="Your Email">
+                    <button>SUBSCRIBE NOW</button>
+                    <i>We never spam</i>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="./display.js"></script>
+    <script src="./app.js"></script>
+    
+</body>
+
+</html>

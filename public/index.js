@@ -13,6 +13,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
     })
 
+    window.addEventListener("scroll", ()=>{
+let navcon =  document.querySelector(".nav_main_contaianer")
+
+        const scrollPosition = window.scrollY;
+        const scrollDirection = scrollPosition > 0 ? "down": "up";
+    
+        if (scrollDirection === "down"){
+            navcon.classList.add("hidden")
+        }else{
+            navcon.classList.remove("hidden")
+        }
+    })
+
 
     let Api_key = "2d5671fc4eb54394ac7f3d4c6ae110a1";
     let General = " https://newsapi.org/v2/everything?q=Recent&apikey="
@@ -26,67 +39,67 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     const RecentNews = async () => {
-            const response = await fetch(General + Api_key);
-            Recent_array = []
-            const data = await response.json();
-            // console.log(data)
-            if (data.status === "ok") {
-                Recent_array = data.articles;
-                Recent()
-            } else {
-                console.log(data.status)
-            }
+        const response = await fetch(General + Api_key);
+        Recent_array = []
+        const data = await response.json();
+        // console.log(data)
+        if (data.status === "ok") {
+            Recent_array = data.articles;
+            Recent()
+        } else {
+            console.log(data.status)
+        }
 
-            // TECHNONOGY
-            const tech_response = await fetch(tech + Api_key);
-            Tech_arry = []
-            const Tech_json = await tech_response.json()
-            // console.log(Tech_json)
-            if (Tech_json.status === "ok") {
-                Tech_arry = Tech_json.articles;
-                Technology_func()
-            } else {
-                console.log(Tech_json.status)
-            }
-            // BUSINESS
-            const business_response = await fetch(business + Api_key);
-            business_array = []
-            const Business_json = await business_response.json()
+        // TECHNONOGY
+        const tech_response = await fetch(tech + Api_key);
+        Tech_arry = []
+        const Tech_json = await tech_response.json()
+        // console.log(Tech_json)
+        if (Tech_json.status === "ok") {
+            Tech_arry = Tech_json.articles;
+            Technology_func()
+        } else {
+            console.log(Tech_json.status)
+        }
+        // BUSINESS
+        const business_response = await fetch(business + Api_key);
+        business_array = []
+        const Business_json = await business_response.json()
 
-            if (Business_json.status === "ok") {
-                business_array = Business_json.articles
-                Business_func()
-            } else {
-                console.log(Business_json.status)
-            }
-            // cars
+        if (Business_json.status === "ok") {
+            business_array = Business_json.articles
+            Business_func()
+        } else {
+            console.log(Business_json.status)
+        }
+        // cars
 
-            const cars_response = await fetch(cars + Api_key)
-            cars_array = []
+        const cars_response = await fetch(cars + Api_key)
+        cars_array = []
 
-            const cars_json = await cars_response.json()
-            if (cars_json.status === "ok") {
-                cars_array = cars_json.articles;
-                cars_fun()
+        const cars_json = await cars_response.json()
+        if (cars_json.status === "ok") {
+            cars_array = cars_json.articles;
+            cars_fun()
 
-            } else {
-                console.log(cars_json.status)
-            }
-
-
-            // FINANCE
-            Finance_array = []
-            const finance_response = await fetch(Finance + Api_key)
-            const Finance_json = await finance_response.json()
-            // console.log("cars response"+ finance_response)    
-            if (Finance_json.status === "ok") {
-                Finance_array = Finance_json.articles
-                Finance_function()
+        } else {
+            console.log(cars_json.status)
+        }
 
 
-            } else {
-                console.log(Finance_json.status)
-            }
+        // FINANCE
+        Finance_array = []
+        const finance_response = await fetch(Finance + Api_key)
+        const Finance_json = await finance_response.json()
+        // console.log("cars response"+ finance_response)    
+        if (Finance_json.status === "ok") {
+            Finance_array = Finance_json.articles
+            Finance_function()
+
+
+        } else {
+            console.log(Finance_json.status)
+        }
 
         // FOOTBALL
         Football_array = []
@@ -125,7 +138,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (scholarship_json.status === "ok") {
             scholarship_array = scholarship_json.articles;
 
-           
+
             console.log(scholarship_json);
             scholarship_function()
 
